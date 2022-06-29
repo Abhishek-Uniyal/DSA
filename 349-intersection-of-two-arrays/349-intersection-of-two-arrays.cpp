@@ -10,10 +10,10 @@ public:
         
         for(int i=0;i<nums2.size();i++)
         {
-            if(mp[nums2[i]]==1)
+            if(mp.find(nums2[i])!=mp.end())
             {
                 v.push_back(nums2[i]);
-                mp[nums2[i]]=0;
+                mp.erase(nums2[i]);
             }
         }
     return v;
