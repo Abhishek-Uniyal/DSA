@@ -7,18 +7,18 @@ public:
             mp[((arr[i]%k)+k)%k]++;
         }
         
-        for (auto i = mp.begin(); i != mp.end(); i++)
+        for (int i=0;i<=k/2; i++)
         {
-            if(i->first == 0 )
+            if(i == 0)
             {
-                if(i->second%2!=0)
+                if(mp[i]%2!=0)
                 {
                     return false;
                 }
-                else
+                else 
                     continue;
-            }
-            if(mp[k-i->first]!= i->second){
+            }            
+            if(mp[k-i]!= mp[i]){
                 return false;
             }
         }
