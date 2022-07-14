@@ -15,7 +15,7 @@ public:
         
         vector<vector<int>> v;
         vector<int> temp;
-        sort(nums.begin(),nums.end());
+        //sort(nums.begin(),nums.end());
         f(nums,v,0,temp);
         return v;
     }
