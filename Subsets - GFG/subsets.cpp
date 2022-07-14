@@ -13,10 +13,12 @@ class Solution
     public:
     void f(vector<int>& A,vector<vector<int>> &v,int i,vector<int> &temp)
     {
+        
         if(i == A.size())
-        {    v.push_back(temp);
-             return;
-        }
+            {
+                v.push_back(temp);
+                return;
+            }
         temp.push_back(A[i]);
         f(A,v,i+1,temp);
         temp.pop_back();
@@ -28,7 +30,6 @@ class Solution
         vector<int> temp;
         f(A,v,0,temp);
         sort(v.begin(),v.end());
-        
         return v;
     }
 };
