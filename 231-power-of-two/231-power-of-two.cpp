@@ -1,6 +1,8 @@
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        return n > 0 && not (n & n - 1);
+        if(log2(n)-round(log2(n))==0)
+            return true;
+    return false;
     }
 };
